@@ -68,13 +68,15 @@ validation samples, and 500\~999 means computed on 500 abnormal samples.
 
 `$ python train.py [--result] [--epochs] [--batch_size] [--test_samples]`  
 
-All the above arguments are optional.
+All the above arguments are optional.  
 
 * `--result`: a path to result graph image. the default value is ./result.png
 * `--epochs`: training epochs. the default value is 10.
 * `--batch\_size`: batch size during training. the default value is 64.
 * `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 500.
 
+ex) `$ python train.py --result ./result.png --epochs 10 --batch_size 64 --test_samples 500`
+  
 Dependencies are as follows.  
 
 * Keras==2.1.4
