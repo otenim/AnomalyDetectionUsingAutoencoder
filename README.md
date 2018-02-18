@@ -10,13 +10,13 @@ the model, the corresponding reconstruction error will increase. We call such in
 
 ## Model Architecture
 
-**autoencoder**  
+#### autoencoder
 ![autoencoder](https://i.imgur.com/Ccx6TAG.png)  
 
-**deep autoencoder**  
+#### deep autoencoder
 ![deep_autoencoder](https://i.imgur.com/ladN1EJ.png)  
 
-**convolutional autoencoder**  
+#### convolutional autoencoder
 ![conv_autoencoder](https://i.imgur.com/AGlKpwU.png)  
 
 ## Datasets
@@ -40,12 +40,12 @@ the model, the corresponding reconstruction error will increase. We call such in
 
 1. Train an autoencoder on only normal training samples.
 2. Compute losses for validation samples that consists of normal validation samples and
-abnormal samples. validation_samples[0~499] corresponds to the former dataset and
-validation_samples[500~999] corresponds to the latter. 1,000 samples in total.
+abnormal samples. validation_samples[0\~499] corresponds to the former dataset and
+validation_samples[500\~999] corresponds to the latter. 1,000 samples in total.
 
 The above procedure is executed for each three models.
 
 ## Result
 
-As described in the last section, sample index 0~499 means losses computed on 500 normal
-validation samples, and 500~999 means computed on 500 abnormal samples.
+As described in the last section, sample index 0\~499 means losses computed on 500 normal
+validation samples, and 500\~999 means computed on 500 abnormal samples.
