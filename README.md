@@ -54,15 +54,15 @@ validation samples, and 500\~999 means computed on 500 abnormal samples.
 
 ##### 1 training epochs
 
-![result\_ep1](https://i.imgur.com/HB0Yaa6.png)  
+![result\_ep1](https://i.imgur.com/lrW93M0.png)  
 
 ##### 5 training epochs
 
-![result\_ep5]()  
+![result\_ep5](https://i.imgur.com/IY54UIU.png)  
 
 ##### 10 training epochs
 
-![result\_ep10]()  
+![result\_ep10](https://i.imgur.com/Gb69PQd.png)  
 
 ## Script
 
@@ -70,9 +70,16 @@ validation samples, and 500\~999 means computed on 500 abnormal samples.
 
 All the above arguments are optional.
 
-* `--result`: a path to result graph image. the default value is ./result.png 
+* `--result`: a path to result graph image. the default value is ./result.png
 * `--epochs`: training epochs. the default value is 10.
 * `--batch\_size`: batch size during training. the default value is 64.
 * `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 500.
 
+Dependencies are as follows.  
 
+* Keras==2.1.4
+* Tensorflow==1.4.0
+* Matplotlib==2.1.2
+* Numpy==1.14.0
+
+All the above dependencies can be installed by pip command.
