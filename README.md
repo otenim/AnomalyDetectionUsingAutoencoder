@@ -5,7 +5,7 @@
 We tried comparing three models: (1) autoencoder, (2) deep autoencoder, and (3) convolutional autoencoder in terms of capability of anomaly detection.
 
 In anomaly detection using autoencoders, we train an autoencoder on only normal
-dataset. So, when an input data that has different features from normal dataset are fed to
+dataset. So, when an input data that have different features from normal dataset are fed to
 the model, the corresponding reconstruction error will increase. We call such input data "abnormal data" here.
 
 ## Model Architecture
@@ -40,17 +40,17 @@ Details for these model architectures are written in `models.py`.
 
 ## Evaluation Procedure
 
-1. Train an autoencoder on only normal training samples.
-2. Compute losses for validation samples that consists of normal validation samples and
-abnormal samples. validation_samples[0\~499] corresponds to the former dataset and
-validation_samples[500\~999] corresponds to the latter. 1,000 samples in total.
+1. Train an autoencoder on only normal dataset.
+2. Compute losses for validation dataset that consists of normal validation dataset and
+abnormal dataset.
 
-The above procedure is executed for each three models.
+The above procedure is to be executed for each three models.
 
 ## Result
 
-As described in the last section, sample index 0\~499 means losses computed on 500 normal
+Sample index (x-axis) 0\~499 means losses computed on 500 normal
 validation samples, and 500\~999 means computed on 500 abnormal samples.
+You can the losses during samples index 500\~99 increase as expected.
 
 ##### 1 training epochs
 
@@ -76,7 +76,7 @@ All the above arguments are optional.
 * `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 500.
 
 ex) `$ python train.py --result ./result.png --epochs 10 --batch_size 64 --test_samples 500`
-  
+
 Dependencies are as follows.  
 
 * Keras==2.1.4
