@@ -54,12 +54,25 @@ validation samples, and 500\~999 means computed on 500 abnormal samples.
 
 ##### 1 training epochs
 
-![result_ep1](https://i.imgur.com/HB0Yaa6.png)  
+![result\_ep1](https://i.imgur.com/HB0Yaa6.png)  
 
 ##### 5 training epochs
 
-![result_ep5]()  
+![result\_ep5]()  
 
 ##### 10 training epochs
 
-![result_ep10]()
+![result\_ep10]()  
+
+## Script
+
+`$ python train.py [--result] [--epochs] [--batch_size] [--test_samples]`  
+
+All the above arguments are optional.
+
+* `--result`: a path to result graph image. the default value is ./result.png 
+* `--epochs`: training epochs. the default value is 10.
+* `--batch\_size`: batch size during training. the default value is 64.
+* `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 500.
+
+
