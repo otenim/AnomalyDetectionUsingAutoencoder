@@ -15,7 +15,7 @@ parser.add_argument('--loss', choices=['mean_squared_error', 'binary_crossentrop
 parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--batch_size', type=int, default=64)
 parser.add_argument('--test_samples', type=int, default=50)
-parser.add_argument('--result_dir', default=curdir)
+parser.add_argument('--result', default=os.path.join(curdir, 'result.png'))
 
 def main(args):
 
@@ -77,17 +77,12 @@ def main(args):
         # delete model for saving memory
         del model
 
-    # create result directory (if necessary)
-    if os.path.exists(args.result_dir) == False:
-        print('created a directory %s for storing result graph')
-        os.makedirs(args.result_dir)
-
     # create graph
     plt.legend(loc='best')
     plt.grid()
     plt.xlabel('sample index')
     plt.ylabel('loss')
-    plt.savefig(os.path.join(args.result_dir, 'result.png'))
+    plt.savefig(args.result)
     plt.clf()
 
 

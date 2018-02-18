@@ -21,6 +21,8 @@ the model, the corresponding reconstruction error will increase. We call such in
 
 ## Datasets
 
+Details for these model architectures are written in `models.py`.  
+
 **Normal dataset**  
 
 ![mnist](https://i.imgur.com/ia2Cqxf.png)  
