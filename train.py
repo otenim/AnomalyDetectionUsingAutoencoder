@@ -14,7 +14,7 @@ parser.add_argument('--optimizer', choices=['adam','sgd','adagrad'], default='ad
 parser.add_argument('--loss', choices=['mean_squared_error', 'binary_crossentropy'], default='mean_squared_error')
 parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--batch_size', type=int, default=64)
-parser.add_argument('--test_samples', type=int, default=500)
+parser.add_argument('--test_samples', type=int, default=50)
 parser.add_argument('--result_dir', default=curdir)
 
 def main(args):
