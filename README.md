@@ -49,3 +49,15 @@ The above procedure is executed for each three models.
 
 As described in the last section, sample index 0\~499 means losses computed on 500 normal
 validation samples, and 500\~999 means computed on 500 abnormal samples.
+
+##### 1 training epochs
+
+![result_ep1](https://i.imgur.com/HB0Yaa6.png)  
+
+##### 5 training epochs
+
+![result_ep5]()  
+
+##### 10 training epochs
+
+![result_ep10]()
