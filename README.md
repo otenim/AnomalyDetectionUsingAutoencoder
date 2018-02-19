@@ -74,7 +74,7 @@ All the above arguments are optional.
 * `--result`: a path to result graph image. the default value is ./result.png
 * `--epochs`: training epochs. the default value is 10.
 * `--batch\_size`: batch size during training. the default value is 64.
-* `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 500.
+* `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 50.
 
 ex) `$ python train.py --result ./result.png --epochs 10 --batch_size 64 --test_samples 500`
 
