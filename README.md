@@ -29,14 +29,14 @@ Details for these model architectures are written in `models.py`.
 
 * 28\*28\*1 gray-scale images
 * training samples: 60,000
-* validation samples: 500 (randomly sampled from the original 10,000 samples)
+* validation samples: 50 (randomly sampled from the original 10,000 samples)
 
 **Abnormal dataset**  
 
 ![fashion](https://i.imgur.com/NhjuFnx.png)  
 
 * 28\*28\*1 gray-scale images
-* validation samples: 500 (randomly sampled from the original 10,000 samples)
+* validation samples: 50 (randomly sampled from the original 10,000 samples)
 
 ## Evaluation Procedure
 
@@ -48,10 +48,10 @@ The above procedure is to be executed for each three models.
 
 ## Result
 
-Sample index (x-axis) 0\~499 means losses computed on 500 normal
-validation samples, and 500\~999 means computed on 500 abnormal samples.
-You can see losses during sample index 500\~999 increase as expected.
-Hoewver, contraty to my expectations, autoencoder and deep autoencoder appear to be more accurate than convolutional one in this settings.
+Sample index (x-axis) 0\~49 correspond to losses computed on 50 normal
+validation samples, and 50\~99 correspond to losses computed on 50 abnormal samples.
+You can see losses during sample index 50\~99 increase as expected.
+However, contraty to my expectations, autoencoder and deep autoencoder appear to be more accurate than convolutional one in this settings.
 
 ##### 1 training epochs
 
