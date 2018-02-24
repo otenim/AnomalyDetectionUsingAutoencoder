@@ -2,7 +2,8 @@
 
 ## Overview
 
-We tried comparing three models: (1) autoencoder, (2) deep autoencoder, and (3) convolutional autoencoder in terms of capability of anomaly detection.
+We tried comparing three models: (1) autoencoder, (2) deep_autoencoder,
+and (3) convolutional_autoencoder in terms of capability of anomaly detection.
 
 In anomaly detection using autoencoders, we train an autoencoder on only normal
 dataset. So, when an input data that have different features from normal dataset are fed to
@@ -13,10 +14,10 @@ the model, the corresponding reconstruction error will increase. We call such in
 #### autoencoder
 ![autoencoder](https://i.imgur.com/Ccx6TAG.png)  
 
-#### deep autoencoder
+#### deep_autoencoder
 ![deep_autoencoder](https://i.imgur.com/ladN1EJ.png)  
 
-#### convolutional autoencoder
+#### convolutional_autoencoder
 ![conv_autoencoder](https://i.imgur.com/AGlKpwU.png)  
 
 ## Datasets
@@ -44,14 +45,19 @@ Details for these model architectures are written in `models.py`.
 2. Compute losses for validation dataset that consists of normal validation dataset and
 abnormal dataset.
 
-The above procedure is to be executed for each three models.
+The above procedure is to be executed for each above three models.
 
 ## Result
 
 Sample index (x-axis) 0\~49 correspond to losses computed on 50 normal
 validation samples, and 50\~99 correspond to losses computed on 50 abnormal samples.
 You can see losses during sample index 50\~99 increase as expected.
-However, contraty to my expectations, autoencoder and deep autoencoder appear to be more accurate than convolutional one in this settings.
+However, contraty to my expectations, autoencoder and deep_autoencoder are more accurate than convolutional_autoencoder in this settings.
+Since generalization performance of convolutional layers are generally higher than fully-connected layers, it seems that convolutional_autoencoder could reconstruct
+accurately even abnormal samples.
+It should be noted that
+good models and tricks in classification problems may not necessarily perform well
+in problems of anomaly detection using Autoencoder, too.
 
 ##### 1 training epochs
 
@@ -73,8 +79,8 @@ All the above arguments are optional.
 
 * `--result`: a path to result graph image. the default value is ./result.png
 * `--epochs`: training epochs. the default value is 10.
-* `--batch\_size`: batch size during training. the default value is 64.
-* `--test\_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 50.
+* `--batch_size`: batch size during training. the default value is 64.
+* `--test_samples`: number of validation samples for each dataset (i.e., normal validation dataset and abnormal dataset). the default value is 50.
 
 ex) `$ python train.py --result ./result.png --epochs 10 --batch_size 64 --test_samples 500`
 
