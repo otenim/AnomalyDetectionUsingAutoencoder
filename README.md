@@ -2,8 +2,8 @@
 
 ## Overview
 
-We tried comparing three models: (1) autoencoder, (2) deep_autoencoder,
-and (3) convolutional_autoencoder in terms of capability of anomaly detection.
+We tried comparing three models: (1) autoencoder, (2) deep\_autoencoder,
+and (3) convolutional\_autoencoder in terms of capability of anomaly detection.
 
 In anomaly detection using autoencoders, we train an autoencoder on only normal
 dataset. So, when an input data that have different features from normal dataset are fed to
