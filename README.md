@@ -52,12 +52,12 @@ The above procedure is to be executed for each above three models.
 Sample index (x-axis) 0\~49 correspond to losses computed on 50 normal
 validation samples, and 50\~99 correspond to losses computed on 50 abnormal samples.
 You can see losses during sample index 50\~99 increase as expected.
-However, contraty to my expectations, autoencoder and deep_autoencoder are more accurate than convolutional_autoencoder in this settings.
-Since generalization performance of convolutional layers are generally higher than fully-connected layers, it seems that convolutional_autoencoder could reconstruct
+However, contraty to my expectations, autoencoder and deep\_autoencoder are more accurate than convolutional\_autoencoder in this settings.
+Since generalization performance of convolutional layers are generally higher than fully-connected layers, it seems that convolutional\_autoencoder could reconstruct
 accurately even abnormal samples.
 It should be noted that
 good models and tricks in classification problems may not necessarily perform well
-in problems of anomaly detection using Autoencoder, too.
+in problems of anomaly detection using Autoencoder.
 
 ##### 1 training epochs
 
